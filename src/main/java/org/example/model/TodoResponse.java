@@ -15,11 +15,11 @@ public class TodoResponse {
     private Boolean completed;
     private String url;
 
-    public TodoResponse(TodoEntity todoEntity){
-        this.id = todoEntity.getId();
-        this.title = todoEntity.getTitle();
-        this.order = todoEntity.getOrder();
-        this.completed = todoEntity.getCompleted();
+    public TodoResponse(TodoModel todoModel){
+        this.id = todoModel.getId();
+        this.title = todoModel.getTitle();
+        this.order = todoModel.getOrder();
+        this.completed = todoModel.getCompleted();
 
         // 하드코딩할 경우 변경시 수정/배포해야 되므로 configuration이나 propertise로 작업을..
         this.url = "http://localhost:8080/" + this.id;
